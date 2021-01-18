@@ -2,72 +2,48 @@ package 재귀.로또;
 
 // #6603번
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
 
 public class Main {
     Scanner sc = new Scanner(System.in);
-
-    private List[] result;
-    private int cnt;
-    private int size;
-    public Main() {
-        size=10;
-        result=new List[size];
-        cnt=0;
-    }
-
-    public void mkCombi(List<int[]> combinations,int []data,int start,int end,int index){
-        if(index==data.length){
-            int[] combination=data.clone();
-            combinations.add(combination);
-        }
-        else if(start<=end){
-            data[index]=start;
-            mkCombi(combinations,data,start+1,end,index+1);
-            mkCombi(combinations,data,start+1,end,index);
+    public void doCombination(int[] combArr, int n, int r, int index, int target, int[] arr){
+        if(r == 0){//r개의 원소를 모두 선택후 마지막 재귀 함수에 진입한 상태
+            for(int i=0; i<index; i++) System.out.print(arr[combArr[i]] + " ");
+            System.out.println();
+        }else if(target == n) return;//부분탐색트리로 보면 맨 아래까지 왔는데 원하는 부분집합을 찾지 못한 경우
+        else{
+            combArr[index] = target;
+            doCombination(combArr, n, r-1, index+1, target+1, arr);
+            /*
+            * 특정 원소를 택한후, 선택한 원소의 위치를 저장하는 combArr에 값을 저장후, index++, 검색 target도 다음 위치로
+            * 넘어가기 위해 +1
+            * */
+            doCombination(combArr, n, r, index, target+1, arr);
+            /*
+            * 특정 원소를 택히자 않았으므로, r개 그대로 유지, combArr에 저장한게 없으니 index도 변함 없고, 다음 타켓 선택위해
+            * target+1
+            * */
         }
     }
-    public List<int[]> generate(int n,int r,int []set){
-        List<int[]> combinations=new ArrayList<>();
 
-        mkCombi(combinations,set,0,n-1,0);
-        return combinations;
-    }
-    public void printResult(){
-        for(int i=0;i< result.length;i++)
-            System.out.println(result[i].toString());
-    }
-    public void updateSize(){
-        List []tmpResult=new List[this.size*2];
-        for(int i=0;i<this.cnt;i++){
-            tmpResult[i]=result[i];
-        }
-        this.size*=2;
-        result=tmpResult;
-    }
     public void run() {
         try {
             while (true) {
                 int T = sc.nextInt();
                 if (T == 0) {
-                    printResult();
                     break;
                 } else {
-                    int[] set = new int[6];
-                    for (int i : set)
-                        set[i] = sc.nextInt();
-                    result[cnt] = generate(T, 6, set);
-                    cnt++;
+                    int[] data = new int[T];
+                    int[] combArr=new int[6];
+                    for(int i=0;i<data.length;i++)
+                        data[i]=sc.nextInt();
+                    doCombination(combArr,data.length,6,0,0,data);
+                    System.out.println();
                 }
-                if (size - cnt < 2)
-                    updateSize();
             }
         }catch(NullPointerException ne){
-            ;
+            ne.printStackTrace();
         }
-
 
     }
 
