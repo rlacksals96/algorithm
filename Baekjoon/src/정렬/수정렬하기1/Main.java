@@ -1,4 +1,4 @@
-package 정렬;
+package 정렬.수정렬하기1;
 
 import java.util.Scanner;
 
