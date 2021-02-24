@@ -4,8 +4,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 /*
-* 결과값의 크기가 커서 intㄹ 커버하지 못하는 경우도 종종 존재한다. (특히 문제에선 값의 범위를 정확히 안알려주는 경우가 많으므로 결과값을
-* 담는 경우에 대해선 왼만하면 long 같은 큰 자료형을 쓰는것이 좋을거 같다.)
+* 결과값의 크기가 커서 intㄹ 커버하지 못하는 경우도 종종 존재한다. (특히 문제에선
 * */
 public class Main {
     private static long []p=new long[101];
