@@ -12,7 +12,7 @@ public class Main {
         Scanner sc=new Scanner(System.in);
         n=sc.nextInt();
         isUsed=new boolean[3][];
-        isUsed[0]=new boolean[n*2+1];
+        isUsed[0]=new boolean[n*2+1];//걍 넉넉하게 할당한거임.
         isUsed[1]=new boolean[n*2+1];
         isUsed[2]=new boolean[n*2+1];
         for (boolean[] booleans : isUsed) Arrays.fill(booleans, false);
@@ -29,9 +29,9 @@ public class Main {
             if(isUsed[0][i] || isUsed[1][cur+i] || isUsed[2][cur-i+n-1]){
                 continue;
             }
-            isUsed[0][i]=true;
-            isUsed[1][cur+i]=true;
-            isUsed[2][cur-i+n-1]=true;
+            isUsed[0][i]=true;//가로
+            isUsed[1][cur+i]=true;//세로
+            isUsed[2][cur-i+n-1]=true;//대각선
             func(cur+1);
             isUsed[0][i]=false;
             isUsed[1][cur+i]=false;

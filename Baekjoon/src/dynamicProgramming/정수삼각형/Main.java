@@ -38,11 +38,11 @@ public class Main {
         d[0][0]=input[0][0];
         for(int i=1;i<n;i++){
             for(int j=0;j<=i;j++){
-                if(j==0)
+                if(j==0)//왼쪽 끝
                     d[i][j]=d[i-1][j]+input[i][j];
-                else if(i==j)
+                else if(i==j)//오른쪽 끝
                     d[i][j]=d[i-1][j-1]+input[i][j];
-                else
+                else//나머지 사이
                     d[i][j]=Math.max(d[i-1][j-1],d[i-1][j])+input[i][j];
             }
         }

@@ -1,4 +1,4 @@
-package dynamicProgramming.즐거운함수실행;
+package dynamicProgramming.신나는_함수_실행;
 
 import java.io.BufferedReader;
 import java.io.IOException;
