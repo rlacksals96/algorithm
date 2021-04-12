@@ -1,4 +1,5 @@
-#Algorithm Pratice
+Algorithm Pratice
+====================
 > 백준 알고리즘 with Java
 
 |**날짜**|**TIL(알고리즘)**
