@@ -1,4 +1,4 @@
-Algorithm Pratice
+✏️Algorithm Pratice✏️
 ====================
 > 백준 알고리즘 with Java
 
