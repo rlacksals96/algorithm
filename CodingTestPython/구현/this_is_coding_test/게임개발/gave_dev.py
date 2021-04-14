@@ -1,32 +1,55 @@
-#solving
+n, m = list(map(int, input().split()))
 
-import sys
-input=lambda :sys.stdin.readline().rstrip()
+d = [[0] * m for _ in range(n)]
+x, y, direction = map(int, input().split())
+d[x][y] = 1
 
-M,N=list(map(int,input().split()))
-A,B,d=list(map(int,input().split()))
-maps=[[0]*N for _ in range(M)]
+for i in range(n):
+    tmp = list(map(int, input().split()))
+    for idx, t in enumerate(tmp):
+        d[i][idx] = t
 
-direction=[0,1,2,3] # N E S W
-go_left=[[0,-1],[-1,0],[0,1],[1.0]]
-cnt=0
-for n in range(N):
-    tmp=list(map(int,input().split()))
-    for m in range(M):
-        maps[n][m]=tmp[m]
-px=A
-py=B
+# N E S W
+dx = [-1, 0, 1, 0]
+dy = [0, 1, 0, -1]
 
-while True:
-    tmpX=px+go_left[d][0]
-    tmpY=py+go_left[d][1]
-    if tmpX < 0 or tmpX > N or tmpY < 0 or tmpY > M:
-        tmpX = px - go_left[d][0]
-        tmpY = py - go_left[d][1]
-    if d==3:
-        d=0
+
+def turn_left():
+    global direction
+    if direction == 0:
+        direction = 3
     else:
-        d+=1
+        direction -= 1
 
 
+count = 1
+turn_time = 0
+while True:
+    turn_left()
+    nx = x + dx[direction]
+    ny = y + dy[direction]
+    # first visit
+    if d[nx][ny] == 0:
+        d[nx][ny] = 2
+        x = nx
+        y = ny
+        count += 1
+        turn_time = 0
+        continue
+    # 회전 후 가본칸이거나 바다인 경우
+    else:
+        turn_time += 1
 
+    if turn_time == 4:
+        nx = x - dx[direction]
+        ny = y - dy[direction]
+        # 뒤로 이동 가능한 경우
+        if d[nx][ny] == 0:
+            x = nx
+            y = ny
+        # 뒤가 바다인 경우
+        else:
+            break
+        turn_time = 0
+
+print(count)
