@@ -1,3 +1,5 @@
+# 진행중..
+
 n, m = list(map(int, input().split()))
 
 d = [[0] * m for _ in range(n)]
