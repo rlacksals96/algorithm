@@ -1,37 +1,62 @@
+#give up...
 import sys
 
-input = sys.stdin.readline
+input = lambda: sys.stdin.readline().rstrip()
+
+
+global maps
+# N E S W
 dx = [-1, 0, 1, 0]
 dy = [0, 1, 0, -1]
 
-ans = 0
 
-def update_direction(direction):
-    if direction==3:
-        return 0
+def turn_left():
+    global d
+    if d == 3:
+        d = 0
     else:
-        return direction-1
+        d += 1
+
+def check_boundary(x,y):
+     if 0<=x<n and 0<=y<m:
+         return True
+     else:
+         return False
 
 def clean(x,y,d):
+    maps[x][y]=2
     cnt=1
-    arr[x][y]=2
+
     while True:
-        for _ in range(4):
-            nd=update_direction(nd)
-            nx=x+dx[nd]
-            ny=y+dy[nd]
-            d=nd
-            if arr[nx][ny]==0:
-                arr[nx][ny]=2
+        for i in range(4):
+            turn_left()
+            nx=x+dx[d]
+            ny=y+dy[d]
+            if check_boundary(nx,ny) and maps[nx][ny]==0:
                 cnt+=1
+                maps[nx][ny]=2
+                x=nx
+                y=ny
                 break
+            if i==3:
+                nx=x-dx[d]
+                ny=y-dy[d]
+                if maps[nx][ny]==1:
+                    print(cnt)
+                else:
+                    x=nx
+                    y=ny
+
+
+
+
+
+
 
 
 if __name__=="__main__":
     n, m = map(int, input().split())
     r, c, d = map(int, input().split())
-    arr = [list(map(int, input().split())) for _ in range(n)]
-
+    maps = [list(map(int, input().split())) for _ in range(n)]
+    cnt=0
     clean(r,c,d)
-    global ans
-    print(ans)

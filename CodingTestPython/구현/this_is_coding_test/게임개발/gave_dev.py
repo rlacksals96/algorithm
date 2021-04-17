@@ -1,15 +1,10 @@
-# 진행중..
+import sys
 
-n, m = list(map(int, input().split()))
+input = lambda: sys.stdin.readline().rstrip()
 
-d = [[0] * m for _ in range(n)]
-x, y, direction = map(int, input().split())
-d[x][y] = 1
-
-for i in range(n):
-    tmp = list(map(int, input().split()))
-    for idx, t in enumerate(tmp):
-        d[i][idx] = t
+n, m = map(int, input().split())
+x, y, d = map(int, input().split())
+maps = [list(map(int, input().split())) for _ in range(n)]
 
 # N E S W
 dx = [-1, 0, 1, 0]
@@ -17,41 +12,38 @@ dy = [0, 1, 0, -1]
 
 
 def turn_left():
-    global direction
-    if direction == 0:
-        direction = 3
+    global d
+    if d == 3:
+        d = 0
     else:
-        direction -= 1
+        d += 1
 
-
-count = 1
-turn_time = 0
-while True:
-    turn_left()
-    nx = x + dx[direction]
-    ny = y + dy[direction]
-    # first visit
-    if d[nx][ny] == 0:
-        d[nx][ny] = 2
-        x = nx
-        y = ny
-        count += 1
-        turn_time = 0
-        continue
-    # 회전 후 가본칸이거나 바다인 경우
-    else:
-        turn_time += 1
-
-    if turn_time == 4:
-        nx = x - dx[direction]
-        ny = y - dy[direction]
-        # 뒤로 이동 가능한 경우
-        if d[nx][ny] == 0:
-            x = nx
-            y = ny
-        # 뒤가 바다인 경우
+def main():
+    global x,y,d
+    cnt=0
+    turn_cnt=0
+    while True:
+        turn_left()
+        tx=x+dx[d]
+        ty=y+dx[d]
+        if maps[tx][ty]==0:
+            x=tx
+            y=ty
+            maps[x][y]=2
+            cnt+=1
         else:
-            break
-        turn_time = 0
+            turn_cnt+=1
 
-print(count)
+        if turn_cnt==4:
+            tx=x-dx[d]
+            ty=x-dy[d]
+            if maps[tx][ty]==0:
+                x=tx
+                y=ty
+            else:
+                break
+            turn_cnt=0
+
+    print(cnt)
+if __name__=="__main__":
+    main()
