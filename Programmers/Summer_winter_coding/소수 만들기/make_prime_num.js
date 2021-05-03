@@ -1,5 +1,6 @@
 const getCombinations = (arr, selectNumber) => {
 	const results = [];
+
 	if (selectNumber == 1) {
 		return arr.map((value) => [value]);
 	}
@@ -38,5 +39,6 @@ function solution(nums) {
 	}
 	return answer;
 }
+
 const arr = [1, 2, 7, 6, 4];
 console.log(solution(arr));
