@@ -44,14 +44,16 @@
 |2021.04.23|이코테 dfs/bfs - 음료수 얼려 먹기, 미로 탈출|
 |2021.04.25|백준 dfs - 단지번호 붙이기</br>백준 bfs - 미로탐색|
 
-> Programmers Summer/winterCoding(~2019)  with Python
+> Programmers
 
 | **날짜**   | **TIL(알고리즘)**    |
 | ---------- | -----------|
-|2021.04.26| programmers - 예산, 소수, 배달|
-|2021.04.27| programmers - 스킬트리, 영어 끝말잇기|
-|2021.04.28| programmers - 멀쩡한 사각형, 방문길이|
-|2021.04.29| programmers - 기지국 설치(미완성)|
-|2021.04.30| programmers - 기지국 설치, 숫자게임|
+|2021.04.26| programmers(Summer/winterCoding(~2019)) - 예산, 소수, 배달|
+|2021.04.27| programmers(Summer/winterCoding(~2019)) - 스킬트리, 영어 끝말잇기|
+|2021.04.28| programmers(Summer/winterCoding(~2019)) - 멀쩡한 사각형, 방문길이|
+|2021.04.29| programmers(Summer/winterCoding(~2019)) - 기지국 설치(미완성)|
+|2021.04.30| programmers(Summer/winterCoding(~2019)) - 기지국 설치, 숫자게임|
 |2021.05.03| programmers(해쉬) - 완주하지 못한 선수(js), 전화번호 목록(py,js)|
 |2021.05.04| programmers(해쉬) - 베스트앨범(py), 위장(py)|
+|2021.05.06| programmers(스택&큐) - 기능개발, 다리를 지나는 트럭, 주식가격, 프린터(py)</br>programmers(힙) - 더 맵게)py)</br>programmers(정렬) - 가장 큰 수(py|
+|2021.05.07| programmers(정렬) - K번째 수, H-index(py)<br>programmers(완전탐색) - 모의고사, 소수 찾기(py)<br>programmers(bfs/dfs) - 타겟 넘버, 네트워크(py)|
