@@ -1,3 +1,4 @@
+#solved
 def solution(code, day, data):
     answer = []
     for d in data:

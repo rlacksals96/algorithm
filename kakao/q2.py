@@ -1,3 +1,4 @@
+#solve
 from itertools import combinations
 def solution(places):
     answer = []

@@ -1,3 +1,4 @@
+#fail
 def solution(n, start, end, roads, traps):
 
     visited=[False for _ in range(n+1)]

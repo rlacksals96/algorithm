@@ -57,3 +57,6 @@
 |2021.05.04| programmers(해쉬) - 베스트앨범(py), 위장(py)|
 |2021.05.06| programmers(스택&큐) - 기능개발, 다리를 지나는 트럭, 주식가격, 프린터(py)</br>programmers(힙) - 더 맵게)py)</br>programmers(정렬) - 가장 큰 수(py|
 |2021.05.07| programmers(정렬) - K번째 수, H-index(py)<br>programmers(완전탐색) - 모의고사, 소수 찾기(py)<br>programmers(bfs/dfs) - 타겟 넘버, 네트워크(py)|
+|2021.05.08| kakao 코딩테스트</br> 배달의 민족 코딩테스트|
+|2021.05.09| programmers summer internship 코딩테스트|
+|2021.05.11| programmers(bfs/dfs) - 음료수 얼려 먹기(py) .. bfs 구현하여 추가|

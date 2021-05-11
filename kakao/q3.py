@@ -1,3 +1,4 @@
+#fail
 def solution(n, k, cmd):
     answer = ''
     current_list=[i for i in range(n)]
