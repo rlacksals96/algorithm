@@ -43,7 +43,7 @@
 |2021.04.21|백준 완전탐색 - 체스판 다시 칠하기</br> 백준 시뮬레이션 - 아기상어|
 |2021.04.23|이코테 dfs/bfs - 음료수 얼려 먹기, 미로 탈출|
 |2021.04.25|백준 dfs - 단지번호 붙이기</br>백준 bfs - 미로탐색|
-
+|2021.05.11|이코테(bfs/dfs) - 음료수 얼려 먹기(py) .. bfs 구현하여 추가|
 > Programmers
 
 | **날짜**   | **TIL(알고리즘)**    |
@@ -59,4 +59,4 @@
 |2021.05.07| programmers(정렬) - K번째 수, H-index(py)<br>programmers(완전탐색) - 모의고사, 소수 찾기(py)<br>programmers(bfs/dfs) - 타겟 넘버, 네트워크(py)|
 |2021.05.08| kakao 코딩테스트</br> 배달의 민족 코딩테스트|
 |2021.05.09| programmers summer internship 코딩테스트|
-|2021.05.11| programmers(bfs/dfs) - 음료수 얼려 먹기(py) .. bfs 구현하여 추가|
+
