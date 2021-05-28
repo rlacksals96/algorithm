@@ -1,5 +1,14 @@
 import sys
 
+# 추가 개념
+# from bisect import bisect_left, bisect_right
+# 정렬된 순서를 유지하면서 배열a에 x를 삽입할 가장 왼쪽, 오른쪽 인덱스를 리턴함
+# bisect_left(a,x)
+
+# parametric search
+# 최적화 문제를 결정 문제(y/n)로 바꾸어 해결하는 기법
+# 예) 특정 저건을 만족하는 가장 알맞은 ㄱ밧을 빠르게 찾아 최적화하는 문제
+# '떡볶이 떡 만들기' 문제도 이러한 유형중 하나이다
 
 def binary_search_recursive(arr, target, start, end):
     if start > end:
