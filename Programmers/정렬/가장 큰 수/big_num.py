@@ -11,5 +11,5 @@ def solution(numbers):
             return answer
     return '0'
 
-numbers=[0,0,0,0]
+numbers=[3,30,34,5,9]
 print(solution(numbers))

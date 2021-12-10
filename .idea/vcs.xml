@@ -2,5 +2,7 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/kdt_algo_study" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/samsung_sds" vcs="Git" />
   </component>
 </project>

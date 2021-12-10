@@ -29,5 +29,4 @@ def bfs(x, y):
                 queue.append((nx, ny))
     return graph[-1][-1]
 
-
 print(bfs(0, 0))
